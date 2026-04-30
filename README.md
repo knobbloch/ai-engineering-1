@@ -9,9 +9,14 @@ Interview task: add LLM response caching to an internal bank chatbot.
 ```
 ├── src/kb_chat/           # Service source code
 ├── tests/kb_chat_tests/   # Tests
+├── docs/                  # Architecture diagrams
 ├── TASK.md                # Task description
 └── README.md              # This file
 ```
+
+## Architecture
+
+- [C4 + DDD code-level diagrams](docs/architecture-c4-ddd.md)
 
 ## Quick Start
 
