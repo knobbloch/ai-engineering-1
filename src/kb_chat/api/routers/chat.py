@@ -62,7 +62,7 @@ async def chat(body: ChatRequest, request: Request) -> ChatResponse:
 
 
 @chat_router.post("/cache/invalidate/{topic}")
-async def invalidate_cache(topic: str, request: Request) -> dict:
+async def invalidate_cache(topic: str, request: Request) -> dict[str, str]:
     chat_service: KnowledgeBaseChatService = request.app.state.chat_service
     await chat_service.invalidate_topic(topic)
     return {"invalidated": topic}

@@ -1,6 +1,7 @@
 import hashlib
 import logging
 import textwrap
+from typing import Any
 
 from kb_chat.core.chat.abc import ChatService, ChatServiceError
 from kb_chat.core.knowledge_base.abc import KnowledgeBase
@@ -20,7 +21,7 @@ class KnowledgeBaseChatService(ChatService):
         knowledge_base: KnowledgeBase,
         llm_client: LLMClient,
         default_temperature: float = 0.7,
-        redis_client=None,
+        redis_client: Any = None,
         ttl_seconds: int = 300,
     ) -> None:
         self.__knowledge_base = knowledge_base
