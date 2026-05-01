@@ -2,6 +2,7 @@ import logging
 import typing as t
 from contextlib import asynccontextmanager
 
+import redis.asyncio as redis
 from fastapi import FastAPI
 
 from kb_chat.api.routers.chat import chat_router
@@ -9,7 +10,6 @@ from kb_chat.configuration import Configuration
 from kb_chat.core.chat.impl.service import KnowledgeBaseChatService
 from kb_chat.core.knowledge_base.impl.in_memory import InMemoryKnowledgeBase
 from kb_chat.core.llm.impl.random import RandomLLMClient
-import redis.asyncio as redis
 
 logger = logging.getLogger(__name__)
 

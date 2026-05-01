@@ -43,7 +43,6 @@ async def list_topics(request: Request) -> TopicsResponse:
 @chat_router.post("/chat", response_model=ChatResponse)
 async def chat(body: ChatRequest, request: Request) -> ChatResponse:
     chat_service: ChatService = request.app.state.chat_service
-    knowledge_base = request.app.state.knowledge_base
 
     try:
         result = await chat_service.chat(

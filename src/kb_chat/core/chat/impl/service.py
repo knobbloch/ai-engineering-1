@@ -1,6 +1,6 @@
+import hashlib
 import logging
 import textwrap
-import hashlib
 
 from kb_chat.core.chat.abc import ChatService, ChatServiceError
 from kb_chat.core.knowledge_base.abc import KnowledgeBase
